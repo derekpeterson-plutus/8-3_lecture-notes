@@ -12,11 +12,11 @@ const sumMoney = (arr) => {
     res += cash; // how do i add this up?
   }
 
-  console.log(res);
+  //console.log(res);
 };
 
-sumMoney(snowMoney);
-sumMoney(lawnMoney);
+// sumMoney(snowMoney);
+// sumMoney(lawnMoney);
 
 // Create an accumulator function which takes the following arguments:
 // A number representing a person's grocery budget (budget)
@@ -43,4 +43,12 @@ function subtractSpendingFromBudget(budget, receipts) {
 const groceryBudget = 350;
 const groceryReceipts = [40.24, 130.97, 99.02, 85.55];
 
-console.log(subtractSpendingFromBudget(groceryBudget, groceryReceipts));
+//console.log(subtractSpendingFromBudget(groceryBudget, groceryReceipts));
+
+let partyGuests = ['Amy', 'John', 'David', 'Jonas', 'Krystal'];
+function inviteMessage (partyGuests) {
+   for (let i = 0; i < partyGuests.length; i++) {
+    partyGuests[i] = `Dear ${partyGuests[i]}, you are cordially invited to our dinner party.`;
+ } return partyGuests
+} 
+console.log(inviteMessage(partyGuests))
