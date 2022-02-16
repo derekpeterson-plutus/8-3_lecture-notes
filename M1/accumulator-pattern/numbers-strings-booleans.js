@@ -45,10 +45,35 @@ const groceryReceipts = [40.24, 130.97, 99.02, 85.55];
 
 //console.log(subtractSpendingFromBudget(groceryBudget, groceryReceipts));
 
-let partyGuests = ['Amy', 'John', 'David', 'Jonas', 'Krystal'];
-function inviteMessage (partyGuests) {
-   for (let i = 0; i < partyGuests.length; i++) {
-    partyGuests[i] = `Dear ${partyGuests[i]}, you are cordially invited to our dinner party.`;
- } return partyGuests
-} 
-console.log(inviteMessage(partyGuests))
+let partyGuests = ["Amy", "John", "David", "Jonas", "Krystal"];
+function inviteMessage(partyGuests) {
+  for (let i = 0; i < partyGuests.length; i++) {
+    partyGuests[
+      i
+    ] = `Dear ${partyGuests[i]}, you are cordially invited to our dinner party.`;
+  }
+  return partyGuests;
+}
+console.log(inviteMessage(partyGuests));
+
+console.log(subtractSpendingFromBudget(groceryBudget, groceryReceipts));
+
+/**
+ * Create an accumulator pattern function which takes the following arguments:
+ *      An array of strings including the names of each invitee to a dinner party
+ * And returns the same array with each name replaced with the following message:
+ *      "Dear <name>, you are cordially invited to my dinner party."
+ */
+
+function formatInvite(invitees) {
+  for (let i = 0; i < invitees.length; i++) {
+    invitees[
+      i
+    ] = `Dear ${invitees[i]}, you are cordially invited to my dinner party.`;
+  }
+  return invitees; // Default type is array, default value is the given array
+}
+
+const partyGuests = ["matt", "krystal", "derek"];
+
+console.log(formatInvite(partyGuests));
