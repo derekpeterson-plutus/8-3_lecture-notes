@@ -47,6 +47,8 @@ const salesforceData = [
   "Trevor Triumph",
 ];
 
+//console.log(salesforceData.length);
+
 let googleSheetsData = [
   "JuhaO cheN",
   "krYSTal MANsOUR",
@@ -79,3 +81,27 @@ let googleSheetsData = [
   "deREk pETeRSOn",
   "ANToNIO shIVeRs",
 ];
+
+//console.log(googleSheetsData.length);
+
+let arr1 = salesforceData;
+let arr2 = googleSheetsData;
+
+function printMissingNames(arr1, arr2) {
+  let missingFellows = [];
+  let list1 = [];
+  let list2 = [];
+  for (let elm of arr1) {
+    list1.push(elm.toLowerCase());
+  }
+  for (let elm of arr2) {
+    list2.push(elm.toLowerCase());
+  }
+  for (const elm of list1) {
+    if (!list2.includes(elm)) {
+      missingFellows.push(elm);
+    }
+  }
+  return missingFellows;
+}
+console.log(printMissingNames(arr1, arr2));

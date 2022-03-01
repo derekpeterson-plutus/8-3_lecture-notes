@@ -11,6 +11,19 @@
 let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2]; // --> 276
 let arr_2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26]; // --> 351
 
+function sumArray(arr_1, arr_2) {
+    let sum1 = 0;
+    let sum2 = 0;
+    for (let i = 0; i < arr_1.length; i++) {
+        sum1 += arr_1[i]
+    }
+    for(let j = 0; j < arr_2.length; j++) {
+        sum2 += arr_2[j]
+    }
+    return sum1 + sum2;
+}
+//console.log(sumArray(arr_1, arr_2));
+
 /**
  * EXERCISE 2
  *
@@ -32,7 +45,13 @@ let arr_2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26]; // --> 351
  * 20
  * 22
  */
+
 let n1 = 22;
+    
+for (let i = 2; i <= n1; i += 2) {
+    //console.log(i)
+} 
+
 
 /**
  * EXERCISE 3
@@ -52,7 +71,13 @@ let n1 = 22;
  * 43
  *
  */
+
 let arr = [43, 'what', 9, true, 'cannot', false, 'be', 3, true];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+    //console.log(arr[i])
+};
+
 
 /**
  * EXERCISE 4
@@ -65,8 +90,15 @@ let arr = [43, 'what', 9, true, 'cannot', false, 'be', 3, true];
  * [12, 7, 16]
  *
  */
+
 let arr_3 = [4, 6, 7];
 let arr_4 = [8, 1, 9];
+
+let sumArr = [];
+for (let i = 0; i < arr_3.length; i++) {
+    sumArr.push(arr_3[i] + arr_4[i])
+}
+//console.log(sumArr)
 
 /**
  * EXERCISE 5
@@ -78,7 +110,15 @@ let arr_4 = [8, 1, 9];
  *
  * HINT: You can use  if((i+1) % 2 == 0) to check for even indexes
  */
-let str1 = 'javascript';
+
+// let str1 = 'javascript';
+// let newStr1 = str1.split('')
+// for (let i = 0; i < newStr1.length; i++) {
+
+//   if ((i+1)%2 == 0) console.log(newStr1.replace(/i/g, 'Z'))
+
+// }
+
 
 /**
  * EXERCISE 6
@@ -91,6 +131,16 @@ let str1 = 'javascript';
 
 let str2 = `don't know why`;
 
+function lookForY(str2) {
+ let string = str2.split('')
+ console.log(string)
+    for (let i = 0; i < string.length; i++) {
+        return string[i] === 'y' ? 'no' : 'yes'
+    }
+}
+//console.log(lookForY(str2))
+
+
 /**
  * EXERCISE 7
  *
@@ -100,6 +150,17 @@ let str2 = `don't know why`;
  */
 
 let n2 = 4; //  4 * 3 * 2 * 1 = 24
+
+function factorial(n2) {
+
+    if (n2 === 0 || n2 === 1) return 1;
+    
+    for (let i = n2 - 1; i >= 1; i--) {
+        n2 *= i;
+    }
+    return n2;
+}
+//console.log(factorial(n2));
 
 /**
  * EXERCISE 8
@@ -123,7 +184,9 @@ let n2 = 4; //  4 * 3 * 2 * 1 = 24
  * 0704
  * That was correct!
  */
+
 let pin = 0704;
+
 
 /** EXERCISE 9
  *
@@ -139,6 +202,24 @@ let pin = 0704;
 
 let str3 = 'racecar';
 let str4 = 'Java';
+
+function isPalindrome(str3, str4) {
+    
+    let allLowerCase1 = str3.toLowerCase();
+
+    let allLowerCase2 = str4.toLowerCase();
+
+    let reversedStr3 = allLowerCase1.split('').reverse().join('');
+    //console.log(reversedStr3)
+    let reversedStr4 = allLowerCase2.split('').reverse().join('');
+    //console.log(reversedStr4)
+
+   if (reversedStr3 === str3) { console.log('Yes') } else {console.log('No')}
+   if (reversedStr4 === str4) {consolog('Yes')} else {console.log('No')}    
+
+}
+//isPalindrome(str3, str4)
+
 
 /**
  * EXERCISE 10
@@ -156,3 +237,66 @@ let str4 = 'Java';
 
 let num1 = 2;
 let num2 = 8;
+
+function sumAllNums(num1, num2) {
+  let sum1 = 0, sum2 = 0;
+    for(let i = 1; i <= num1; i++) {
+        sum1 += i;
+    }
+    for(let j = 1; j <= num2; j++) {
+        sum2 += j;
+    }
+  console.log(sum1, sum2);
+}
+//sumAllNums(num1, num2);
+
+
+/**
+ * EXERCISE 11
+ *
+ * Write a FizzBuzz program that outputs numbers from 1 to 100. But for multiples of 3, print Fizz instead of the number and for the multiples of 5, print Buzz. For numbers which are multiples of both 3 and 5 print, FizzBuzz.
+ *
+ * EXAMPLE:
+ * 1
+ * 2
+ * Fizz
+ * 4
+ * Buzz
+ * Fizz
+ * 7
+ * 8
+ * Fizz
+ * Buzz
+ * 11
+ * Fizz
+ * 13
+ * 14
+ * FizzBuzz
+ * 16
+ * ...
+ * 97
+ * 98
+ * Fizz
+ * Buzz
+ */
+
+// The first method to solve this problem:
+
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 15 === 0) { console.log('FizzBuzz') }
+    else if (i % 3 === 0) { console.log('Fizz') }
+    else if (i % 5 === 0) { console.log('Buzz') }
+    else { console.log(i) }
+  }
+};   
+fizzBuzz()
+
+// The second method to solve this problem:
+
+// for(let i = 1; i <= 100; i++) {
+//   let printOut = "";
+//     if(i % 3 === 0) { printOut += "Fizz" }
+//     if(i % 5 ===0) { printOut += "Buzz" } 
+//     console.log(printOut || i)
+// }

@@ -6,8 +6,9 @@
 function sumAllNumbers(numbers) {
   let result = 0;
   for (let num of numbers) {
-    result += num
-  } return result
+    result += num;
+  }
+  return result;
 }
 
 console.log(sumAllNumbers([10, 20, 30])); //> 60
@@ -23,14 +24,14 @@ console.log(sumAllNumbers([])); //> 0
   If there are no states, just print "STATES: ".
 */
 function presentAllStates(states) {
-let result = "STATES: ";
- for (let state of states) { 
-   result += `${state}, `;
- }
- return result;
+  let result = "STATES: ";
+  for (let state of states) {
+    result += `${state}, `;
+  }
+  return result;
 }
 
-console.log(presentAllStates(['Alaska', 'New York', 'Florida']));
+console.log(presentAllStates(["Alaska", "New York", "Florida"]));
 //> "STATES: Alaska, New York, Florida, "
 console.log(presentAllStates([]));
 //> "STATES: "
@@ -42,15 +43,16 @@ console.log(presentAllStates([]));
 */
 function hasSpace(states) {
   let result = false;
-  for(let state of states) {
-    if(state.includes(' ')) {
-      result = true
+  for (let state of states) {
+    if (state.includes(" ")) {
+      result = true;
     }
-  } return result;
+  }
+  return result;
 }
 
-console.log(hasSpace(['Alaska', 'New York', 'Florida'])); //> true
-console.log(hasSpace(['Alaska', 'Montana', 'Florida'])); //> false
+console.log(hasSpace(["Alaska", "New York", "Florida"])); //> true
+console.log(hasSpace(["Alaska", "Montana", "Florida"])); //> false
 
 /*
   IS VALID
@@ -59,25 +61,32 @@ console.log(hasSpace(['Alaska', 'Montana', 'Florida'])); //> false
 */
 function isValid(states) {
   let result = true;
-   for(let state of states) {
-     if(state.length > 2) {
-      result = false
-     }
-   } return result;
+  for (let state of states) {
+    if (state.length > 2) {
+      result = false;
+    }
+  }
+  return result;
 }
 
-console.log(isValid(['AK', 'NYC', 'FL'])); //> false
-console.log(isValid(['AK', 'WA', 'FL'])); //> true
+console.log(isValid(["AK", "NYC", "FL"])); //> false
+console.log(isValid(["AK", "WA", "FL"])); //> true
 
 /*
   KEBAB CASE
   ---------------
   Write a function that returns a new array of all the states in kebab casing.
 */
-function kebabCase(states) {}
+function kebabCase(states) {
+  let kebabCaseArray = [];
+  for (let state of states) {
+    kebabCaseArray.push(state.toLowerCase().replace(" ", "-"));
+  }
+  return kebabCaseArray;
+}
 
-console.log(kebabCase(['Alaska', 'New York', 'Florida']));
-//> [ "alaska", "new-york", "florida" ]
+console.log(kebabCase(["Alaska", "New York", "Florida", "West virginia"]));
+//> [ "alaska", "new-york", "florida", "west-virginia" ]
 console.log(kebabCase([]));
 //> []
 
@@ -87,25 +96,32 @@ console.log(kebabCase([]));
   Write a function that looks for a state by name. If that state is found, return the state name. If it is not found, return `null`.
 */
 function find(states, name) {
- let result = null;
-  for(let state of states) {
-    if(state === name) {
-      result = state
+  let result = null;
+  for (let state of states) {
+    if (state === name) {
+      result = state;
     }
-  } return result;
+  }
+  return result;
 }
 
-console.log(find(['Alaska', 'New York', 'Florida'], 'Alaska')); //> "Alaska"
-console.log(find(['Alaska', 'New York', 'Florida'], 'Montana')); //> null
+console.log(find(["Alaska", "New York", "Florida"], "Alaska")); //> "Alaska"
+console.log(find(["Alaska", "New York", "Florida"], "Montana")); //> null
 
 /*
   FILTER ABBREVIATIONS
   ---------------
   Write a function that filters out all strings equal to or longer than 3 characters. Return a new array with just the valid abbreviations.
 */
-function filterAbbreviations(states) {}
+function filterAbbreviations(states) {
+  let result = [];
+  for (let state of states) {
+    if (state.length === 2) result.push(state);
+  }
+  return result;
+}
 
-console.log(filterAbbreviations(['AK', 'MT', 'WA', 'NYC']));
+console.log(filterAbbreviations(["AK", "MT", "WA", "NYC"]));
 //> [ "AK", "MT", "WA" ]
-console.log(filterAbbreviations(['Alaska', 'New York', 'Florida']));
+console.log(filterAbbreviations(["Alaska", "New York", "Florida"]));
 //> []
