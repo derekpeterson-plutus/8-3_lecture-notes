@@ -1,10 +1,10 @@
 let arr1 = [];
 let arr2 = [];
-// console.log(typeof arr1, typeof arr2);
+console.log(typeof arr1, typeof arr2);
 
-// console.log(arr1, arr2);
+console.log(arr1, arr2);
 
-// console.log(arr1 === arr2);
+console.log(arr1 === arr2);
 
 var arr3 = [1, 2, 3];
 

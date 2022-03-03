@@ -14,6 +14,26 @@ function randomDecimal30To70(max, min) {
 for (let i = 0; i <=5; i++) {
 console.log(randomDecimal30To70(70, 30))
 }
+=======
+function randomDecimal30To70() {
+  let rand = Math.random();
+  rand = rand * 40; // stretch by the width of the interval
+
+  // now we have a random number between 0 and 40.
+
+  rand = rand + 30; // shift by 30
+
+  // now we have a random num between 30 and 70!
+  return rand;
+}
+
+// What does multiplication do to the interval?
+//    ->
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(randomDecimal30To70());
+// }
+>>>>>>> 2eef95b64e7fff9ce438cf99f55bda18103528a3:M2/built-in-methods/built-in-methods_part-2.js
 
 /**
  * REVIEW ACTIVITY - Part 2
@@ -21,7 +41,7 @@ console.log(randomDecimal30To70(70, 30))
  * This time, generate a random INTEGER.
  * This task is important for selecting random elements of an array.
  *
- * Ask yourself: can your algorithm every return the number 30? How about the number 70? How do you know?
+ * Ask yourself: can your algorithm ever return the number 30? How about the number 70? How do you know?
  *
  * @returns {Integer} - a random integer between 30 and 70
  */
@@ -72,6 +92,7 @@ let exampleObject = {
  * @returns {String} - name of the highest paid role
  *
  */
+<<<<<<< HEAD:M2/built-in-methods_part-2.js
 
 function highestSalary(roles) {
   let roleName = ''
@@ -90,6 +111,25 @@ function highestSalary(roles) {
     }
   }
   return roleName
+
+function highestSalary(roles) {
+  let roleName = "";
+  let roleSalary = 0;
+
+  console.log("keys:", Object.keys(roles));
+  console.log("values:", Object.values(roles));
+  console.log("entries:", Object.entries(roles));
+
+  let entries = Object.entries(roles);
+  for (let entry of entries) {
+    console.log(entry[0]);
+  }
+
+  // for (let value of roles) {
+  //   console.log(value);
+  // }
+
+  return roleName;
 }
 
 let exampleRoles = {
@@ -98,7 +138,10 @@ let exampleRoles = {
   engineeringManager: 200000,
 };
 
+
 highestSalary(exampleRoles)
+
+highestSalary(exampleRoles);
 
 /**
  * RESEARCH ACTIVITY
