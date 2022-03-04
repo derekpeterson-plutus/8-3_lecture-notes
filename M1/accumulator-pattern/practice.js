@@ -44,9 +44,7 @@ console.log(presentAllStates([]));
 function hasSpace(states) {
   let result = false;
   for (let state of states) {
-    if (state.includes(" ")) {
-      result = true;
-    }
+    if (state.includes(" ")) result = true;
   }
   return result;
 }
@@ -62,9 +60,7 @@ console.log(hasSpace(["Alaska", "Montana", "Florida"])); //> false
 function isValid(states) {
   let result = true;
   for (let state of states) {
-    if (state.length > 2) {
-      result = false;
-    }
+    if (state.length > 2) result = false 
   }
   return result;
 }
@@ -98,9 +94,7 @@ console.log(kebabCase([]));
 function find(states, name) {
   let result = null;
   for (let state of states) {
-    if (state === name) {
-      result = state;
-    }
+    if (state === name) result = state;
   }
   return result;
 }

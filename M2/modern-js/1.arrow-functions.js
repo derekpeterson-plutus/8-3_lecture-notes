@@ -1,10 +1,10 @@
 /**
  * 1. Convert the greet() function to use the arrow function syntax instead of the function declaration syntax.
  */
-<<<<<<< HEAD
+
 
 // const greet = (name) => {
-=======
+
 const greet = (name) => {
   let result = "";
   if (name) {
@@ -16,7 +16,7 @@ const greet = (name) => {
 };
 
 // function name(name) {
->>>>>>> e30763bfbfa8bbc89c36c3391436af4c890979b1
+
 //   let result = "";
 //   if (name) {
 //     result = `Welcome to NASA, ${name}!`;
@@ -26,7 +26,7 @@ const greet = (name) => {
 //   return result;
 // }
 
-<<<<<<< HEAD
+
 // function greet(name) {
 //   let result = "";
 //   if (name) {
@@ -39,10 +39,10 @@ const greet = (name) => {
 
 //console.log(greet("Jessica")); //> "Welcome to NASA, Jessica!"
 //console.log(greet()); //> "Welcome to NASA, space cadet!"
-=======
+
 console.log(greet("Jessica")); //> "Welcome to NASA, Jessica!"
 console.log(greet()); //> "Welcome to NASA, space cadet!"
->>>>>>> e30763bfbfa8bbc89c36c3391436af4c890979b1
+
 
 /**
  * 2. Try writing the greet() function above on a single line.
@@ -54,12 +54,12 @@ console.log(greet()); //> "Welcome to NASA, space cadet!"
  * (you may need to use a ternary operator and an implicit return)
  */
 
-<<<<<<< HEAD
+
 const greet2 = (name) => name ? `Welcome to NASA, ${name}!` : `Welcome to NASA, space cadet!` // ===> No return keyword and no curly braces.
-=======
+
 const greet2 = (name) =>
   name ? `Welcome to NASA, ${name}!` : "Welcome to NASA, space cadet!";
->>>>>>> e30763bfbfa8bbc89c36c3391436af4c890979b1
+
 
 console.log(greet2("Jessica")); //> "Welcome to NASA, Jessica!"
 console.log(greet2()); //> "Welcome to NASA, space cadet!"

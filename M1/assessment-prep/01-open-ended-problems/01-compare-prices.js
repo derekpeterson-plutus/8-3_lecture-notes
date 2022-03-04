@@ -7,7 +7,7 @@
 //  Using this function, compare the price of the house to the price of the car AS NUMBERS
 
 // DO NOT CHANGE THE VALUE OF THESE VARIABLES
-<<<<<<< HEAD
+
 
 let priceOfHouse = "€1.500.000";
 let priceOfCar = "€20.000";
@@ -22,7 +22,7 @@ function comparesPrice(priceOfHouse, priceOfCar) {
   return Number(priceOfHouse) > Number(priceOfCar) ? "The house is much more expensive" : "The car is more expensive"; 
 }
 console.log(comparesPrice(priceOfHouse, priceOfCar));
-=======
+
 const priceOfHouse = '€1.500.000';
 const priceOfCar = '€20.000';
 const ageOfCat = 20;
@@ -89,4 +89,4 @@ console.log(comparePrices(priceOfCar, ageOfCat)); // <-- €20.000 is more expen
 console.log(comparePrices(ageOfDog, ageOfCat)); // <-- Neither price 1: 5 or price 2: 20 contains any currency values to compare
 console.log(comparePrices(priceOfCar, priceOfHouse)); // <-- €1.500.000 is more expensive than €20.000
 console.log(comparePrices(priceOfHouse, priceOfCar)); // <-- €1.500.000 is more expensive than €20.000
->>>>>>> 71af50842b976ac1cc46674fa86c53d15cd9bb68
+
