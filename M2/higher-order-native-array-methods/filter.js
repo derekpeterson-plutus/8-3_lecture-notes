@@ -28,7 +28,7 @@ let fans = [
 
 // only admit people over 18 to the fan pub
 // store the filtered fans in a new array
-const pubFans = fans.map(function (fan) {
+const pubFans = fans.map(function(fan) {
   if (fan.age > 18) {
     return fan;
   } else {

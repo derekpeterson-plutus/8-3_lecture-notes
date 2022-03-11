@@ -34,20 +34,20 @@ function isEveryPenFountain(arr) {
   return res;
 }
 
-console.log('is every pen fountain:', isEveryPenFountain(pens));
+console.log('is every pen fountain:', isEveryPenFountain(pens)); // => ouput: false
 
 console.log(
   'is every pen fountain (n.a.m):',
   pens.every(function (pen) {
     pen.style === 'fountain';
   }),
-);
+); // => output: false
 
 console.log(
-  'is every pen fountain (n.a.m with arrow):',
+  'is every pen fountain (n.a.m with arrow function):',
   pens.every((pen) => pen.style === 'fountain'),
   // anonymous arrow function behaves the same as the above example with the anonymous function
-);
+); // => output: false
 
 /**
  * 1

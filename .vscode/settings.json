@@ -1,0 +1,6 @@
+{
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 50,
+    "prettier.withNodeModules": true,
+    "prettier.singleQuote": true
+}
