@@ -57,11 +57,11 @@ console.log(greet()); //> "Welcome to NASA, space cadet!"
 
 const greet2 = (name) => name ? `Welcome to NASA, ${name}!` : `Welcome to NASA, space cadet!` // ===> No return keyword and no curly braces.
 
-const greet2 = (name) =>
-  name ? `Welcome to NASA, ${name}!` : "Welcome to NASA, space cadet!";
+// const greet2 = (name) =>
+//   name ? `Welcome to NASA, ${name}!` : "Welcome to NASA, space cadet!";
 
 
-console.log(greet2("Jessica")); //> "Welcome to NASA, Jessica!"
+// console.log(greet2("Jessica")); //> "Welcome to NASA, Jessica!"
 console.log(greet2()); //> "Welcome to NASA, space cadet!"
 
 /**
