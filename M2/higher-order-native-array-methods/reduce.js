@@ -203,7 +203,7 @@ function shoppingSpree(arr) {
   return totalPrice
 }
 
-const wishlist = [
+const wishlist1 = [
   { title: 'Tesla Model S', price: 90000 },
   { title: '4 carat diamond ring', price: 45000 },
   { title: 'Fancy hacky Sack', price: 5 },
@@ -226,7 +226,7 @@ function flatten(arr) {
   return flatArray
 }
 
-const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
+const arrays1 = [['1', '2', '3'], [true], [4, 5, 6]];
 //console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
 
 /**
@@ -315,10 +315,8 @@ const voterResults = (arr) => {
       numOldVotes: 0,
       numOldPeople: 0,})
 }
-<<<<<<< HEAD
-=======
 
-const wishlist = [
+const wishlist2 = [
   { title: 'Tesla Model S', price: 90000 },
   { title: '4 carat diamond ring', price: 45000 },
   { title: 'Fancy hacky Sack', price: 5 },
@@ -339,7 +337,7 @@ function flatten(arr) {
   // your code here
 }
 
-const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
+const arrays2 = [['1', '2', '3'], [true], [4, 5, 6]];
 
 // console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
 
@@ -403,7 +401,6 @@ function voterResults(arr) {
   // your code here
 }
 
->>>>>>> 36a9de1b78e24a552b6dde3d2ac0aa2431f20ba2
 console.log(voterResults(voters)); // Returned value shown below:
 /*
 { 

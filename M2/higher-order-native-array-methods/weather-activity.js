@@ -96,7 +96,10 @@ function highWindDays(forecast) {
     .map((element) => {
       return element.date;
     });
-  // let days = new Date(windyDaysArr);
+  let days = windyDaysArr.every((el) => {
+    return el.;
+  });
+  console.log(days);
   // let windyDaysIndex = days.getDay();
   return windyDaysArr;
 }
