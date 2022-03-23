@@ -11,13 +11,26 @@ const exampleTodos = require('./todo-data.js');
  * @returns {Number || Error} - a number between 0 and 100 indicating the percent of tasks that have been completed
  */
 function percentCompletetodos(todos) {
-  if (!todos.length) throw 'Error!';
-  let completePercent = todos.reduce((acc, curr) => {
-    return curr.status.complete ? acc + curr.status.complete : acc;
-  }, 0);
-  return `${((completePercent / todos.length) * 100).toFixed(2)}%`;
+  // if (!todos.length) throw 'Error!';
+  // let completePercent = todos.reduce(
+  //   (acc, curr) => {
+  //     return curr.status.complete ? ++acc : acc;
+  //   },
+  //   0
+  // );
+  //console.log(
+  //     'complete percent: ',
+  //     completePercent
+  //   );
+  //   return `${(
+  //     (completePercent / todos.length) *
+  //     100
+  //   ).toFixed(2)}%`;
 }
-//console.log(percentCompletetodos(exampleTodos));
+//console.log(
+//   'The complete task percentage: ',
+//   percentCompletetodos(exampleTodos)
+// );
 /**
  * isTodoDueOn
  *
@@ -33,12 +46,15 @@ function percentCompletetodos(todos) {
  */
 function isTodoDueOn(todos, date = '1/1/1970') {
   return todos.some((todo) => {
-    let dueDay = new Date(todo.status.due).toLocaleDateString();
-    console.log(dueDay);
-    return dueDay === date ? true : false;
+    let dueDay = new Date(
+      todo.status.due
+    ).toLocaleDateString();
+    return dueDay === date;
   });
 }
-console.log(isTodoDueOn(exampleTodos), '3/11/2022');
+console.log(
+  isTodoDueOn(exampleTodos, '3/11/2022')
+);
 /**
  * allRelatedItemsComplete
  *
@@ -53,8 +69,17 @@ console.log(isTodoDueOn(exampleTodos), '3/11/2022');
  *   => ex: allRelatedItemsComplete(exampleTodos, "ehw49g0") // => false
  *   => ex: allRelatedItemsComplete(exampleTodos, "zbacasq") // ERROR
  */
-function allRelatedItemsComplete() {}
-
+function allRelatedItemsComplete(todos, id) {
+  return todos.every((todo) => {
+    if (todo.relatedTo !== id) {
+      throw `Error! Could not find id of ${id}`;
+    }
+    return todo.relatedTo === id;
+  });
+}
+// console.log(
+//   allRelatedItemsComplete(exampleTodos, 'ba9tyk4')
+// );
 /**
  * getStatuses
  *
@@ -72,7 +97,7 @@ function getStatuses(todos) {
       : `${todo.description}: INCOMPLETE`;
   });
 }
-//console.log(getStatuses(exampleTodos));
+console.log(getStatuses(exampleTodos));
 /**
  * getIncompleteDescriptions
  *
@@ -91,9 +116,10 @@ function getIncompleteDescriptions(todos) {
     });
   return incomplete;
 }
-//console.log(getIncompleteDescriptions(exampleTodos));
+console.log(
+  getIncompleteDescriptions(exampleTodos)
+);
 
 // Now it's your turn! Don't stop here:
 // come up with additional practice problems based on the todo list that will help you practice higher order array methods, error handling, and ES6 syntax
 // If you find yourself getting stuck, try to think about features or statistics you would like a todo list application to implement.
-

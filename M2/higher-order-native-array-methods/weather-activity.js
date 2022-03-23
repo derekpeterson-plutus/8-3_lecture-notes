@@ -96,14 +96,14 @@ function highWindDays(forecast) {
     .map((element) => {
       return element.date;
     });
-  let days = windyDaysArr.every((el) => {
-    return el.;
+  let days = windyDaysArr.every((element) => {
+    return element;
   });
   console.log(days);
   // let windyDaysIndex = days.getDay();
   return windyDaysArr;
 }
-console.log(highWindDays(weatherData));
+//console.log(highWindDays(weatherData));
 /**
  * 6. Print out the low temp for days with less than a 5% chance of precipitation.
  *
@@ -117,8 +117,16 @@ console.log(highWindDays(weatherData));
  * // => "3/13/2022 has a low of 34"
  * // => "3/14/2022 has a low of 44"
  */
-function logSunnyDayLows(forecast) {}
-
+function logSunnyDayLows(forecast) {
+  forecast.filter((element) => {
+    element.precipitation.chance < 0.05
+      ? console.log(
+          `${element.date} has a low of ${element.lowTemp}`
+        )
+      : false;
+  });
+}
+console.log(logSunnyDayLows(weatherData));
 /**
  * 7. Given the current temparature, find the first day of the week it could plausibly be
  *
