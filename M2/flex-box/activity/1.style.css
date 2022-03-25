@@ -1,0 +1,8 @@
+/* Add Styles Below */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 50%;
+}
